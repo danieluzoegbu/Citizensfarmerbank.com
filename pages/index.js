@@ -93,7 +93,7 @@ export default function Home() {
               <div className="flex gap-3 justify-center p-10">
                 <div className="xs:hidden">
                   <button className="bg-white leading-0 px-1 py-1 rounded-sm ">
-                    <Link href="/auth/signin">
+                    <Link href="/authpage">
                       <span className="text-[10px]  font-opensans text-green-500">
                         Create Account
                       </span>
