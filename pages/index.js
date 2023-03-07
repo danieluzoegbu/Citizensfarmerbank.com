@@ -77,7 +77,7 @@ export default function Home() {
                 <button className="bg-white hover:bg-gradient-to-r hover:from-green-400 hover:to-green-600 leading-0 px-6 py-2 rounded-md">
                   <Link href="/auth/signin">
                     <span className="text-[16px] font-opensans text-green-500 hover:text-white">
-                      DashBoard
+                      Create Account
                     </span>
                   </Link>
                 </button>
@@ -95,7 +95,7 @@ export default function Home() {
                   <button className="bg-white leading-0 px-1 py-1 rounded-sm ">
                     <Link href="/auth/signin">
                       <span className="text-[10px]  font-opensans text-green-500">
-                        Dashboard
+                        Create Account
                       </span>
                     </Link>
                   </button>
