@@ -66,16 +66,8 @@ export default function Component() {
                 </span>
               </p>
               <div className="pt-10">
-                <Popup
-                  trigger={
-                    <button className="button bg-green-500 border border-white shadow-md py-2 px-4 rounded font-opensans text-white">
-                      Send money
-                    </button>
-                  }
-                  modal
-                  nested
-                >
-                  {(close) => (
+                
+                
                     <div className="bg-white min-h-min p-5">
                       <div className="flex pb-10">
                         <button
@@ -149,71 +141,9 @@ export default function Component() {
                           close modal
                         </button>
                       </div>
-                    </div>
-                  )}
-                </Popup>
+                    
               </div>
             </div>
-            <div class="min-w-min m-auto p-10 mt-5 bg-gray-800 justify-center">
-              <form class="shadow-lg w-full max-w-lg">
-                <p className="font-opensans font-bold text-gray-300 text-[12px] xs:text-[18px]">
-                  ENTER DETAILS TO CONFIRM ACCOUNT
-                </p>
-                <span className="font-opensansitalic font-bold text-green-500 text-[8px] xs:text-[10px] pb-5">
-                  YOUR DETAILS ARE SAFE
-                </span>
-                <div class="flex flex-wrap -mx-3">
-                  <div class="w-full px-3">
-                    <label
-                      class="block uppercase tracking-wide text-gray-400 text-xs font-opensans font-bold mb-2"
-                      for="grid-password"
-                    >
-                      Email
-                    </label>
-                    <input
-                      class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                      id="grid-password"
-                      type="email"
-                    />
-                    <label
-                      class="block uppercase tracking-wide text-gray-400 text-xs font-opensans font-bold mb-2"
-                      for="grid-email"
-                    >
-                      Social Security Number
-                    </label>
-                    <input
-                      class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                      id="grid-password"
-                      type="text"
-                      placeholder="******************"
-                    />
-                    <label
-                      class="block uppercase tracking-wide text-gray-400 text-xs font-opensans font-bold mb-2"
-                      for="grid-email"
-                    >
-                      Tax Number
-                    </label>
-                    <input
-                      class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                      id="grid-password"
-                      type="text"
-                      placeholder="******************"
-                    />
-                    <p class="text-gray-600 mb-3 text-xs italic">
-                      Input a secure password
-                    </p>
-                  </div>
-                </div>
-                <div class="flex flex-wrap -mx-3 mb-2">
-                  {/* REGISTRATION SUBMIT BUTTON */}
-                  <div className="justify-right px-3 pt-5 mb-6 md:mb-0">
-                    <input
-                      type="submit"
-                      className="px-10 py-2 font-opensans font-bold text-gray-400 text-[14px] bg-gray-700 rounded border border-gray-600"
-                    />
-                  </div>
-                </div>
-              </form>
             </div>
           </div>
         </main>
