@@ -17,36 +17,36 @@ function about() {
           <ul className="flex mx-5 justify-center space-x-5">
             <Link
               href="/"
-              className="cursor-pointer font-bold font-opensans text-[12px] text-gray-700 hover:text-green-600 "
+              className="cursor-pointer font-bold text-[12px] text-gray-700 hover:text-green-600 "
             >
               Home
             </Link>
             <Link
               href="/contact"
-              className="cursor-pointer font-bold font-opensans text-[12px] text-gray-700 hover:text-green-600 "
+              className="cursor-pointer font-bold text-[12px] text-gray-700 hover:text-green-600 "
             >
               Contact Us
             </Link>
             <Link
               href="/faq"
-              className="cursor-pointer font-bold font-opensans text-[12px] text-gray-700 hover:text-green-600"
+              className="cursor-pointer font-bold text-[12px] text-gray-700 hover:text-green-600"
             >
               FaQ
             </Link>
             <Link
               href="/signin"
-              className="cursor-pointer font-bold font-opensans text-[12px] text-red-700 hover:text-green-600 "
+              className="cursor-pointer font-bold text-[12px] text-red-700 hover:text-green-600 "
             >
               SignIn
             </Link>
           </ul>
         </div>
-        <h1 className="pt-5 text-center text-green-600 font-burtons text-[40px] underline">
+        <h1 className="pt-5 text-center text-green-600 text-[40px] underline">
           {" "}
           About CFB
         </h1>
         <div className="pt-10">
-          <span className="font-opensans text-[13px]">
+          <span className="text-[13px]">
             Citizen Farmers Bank started in 1999, based on the idea of strong
             relationships, excellent service, and the most respected and
             experienced bankers in each market we serve. Building on the idea of
@@ -57,7 +57,7 @@ function about() {
           </span>
         </div>
         <div className="pt-4 min-w-min">
-          <span className="font-opensans text-[13px]">
+          <span className="text-[13px]">
             Today, Citizen Farmers Bank operates more than 40 banking offices
             throughout Hampton Roads, Central Virginia, and Northeastern and
             Central North Carolina. As a practical expression of our mission,
@@ -67,7 +67,7 @@ function about() {
           </span>
         </div>
         <div className="pt-4">
-          <span className="font-opensans text-[13px]">
+          <span className="text-[13px]">
             Citizens Farmers Bank works with each member toward your ultimate
             success. A key to this is experienced local bankers providing
             high-level expertise and personal attention, empowered to make local
@@ -75,24 +75,24 @@ function about() {
           </span>
         </div>
         <div className="mx-20 p-10 text-center">
-          <h1 className="font-burtons text-[2rem]">We&apos;re strong</h1>
-          <span className="font-opensans text-[13px]">
+          <h1 className="text-[2rem]">We&apos;re strong</h1>
+          <span className="text-[13px]">
             With more than 40 locations backed by more than $14 billion in
             assets, over 1200 employees providing exquisite service to each
             member.
           </span>
         </div>
         <div className="mx-20 p-10 text-center">
-          <h1 className="font-burtons text-[2rem]">We&apos;re experienced</h1>
-          <span className="font-opensans text-[13px]">
+          <h1 className="text-[2rem]">We&apos;re experienced</h1>
+          <span className="text-[13px]">
             The capabilities of the Towne family of services go beyond banking,
             by providing nationally-recognized services at the local level, such
             as investments, home buying, and insurance.
           </span>
         </div>
         <div className="mx-20 p-10 text-center">
-          <h1 className="font-burtons text-[2rem]">We&apos;re loyal</h1>
-          <span className="font-opensans text-[13px]">
+          <h1 className="text-[2rem]">We&apos;re loyal</h1>
+          <span className="text-[13px]">
             CFB provides millions of dollars in local, community reinvestments,
             charitable support, and loans. Expansive Community Involvement is
             evidence that TowneBank is serious about serving others and
@@ -100,10 +100,10 @@ function about() {
           </span>
         </div>
         <div className="text-center space-x-2">
-          <span className="font-opensans font-bold">Have a question?</span>
+          <span className="font-bold">Have a question?</span>
           <Link
             href="/contact"
-            className="font-opensans underline text-blue-400"
+            className="underline text-blue-400"
           >
             Click here to contact us!
           </Link>

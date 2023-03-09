@@ -16,32 +16,32 @@ function contact() {
           <ul className="flex mx-5 justify-center space-x-5">
             <Link
               href="/"
-              className="cursor-pointer font-bold font-opensans text-[12px] text-gray-700 hover:text-green-600 "
+              className="cursor-pointer font-bold text-[12px] text-gray-700 hover:text-green-600 "
             >
               Home
             </Link>
             <Link
               href="/about"
-              className="cursor-pointer font-bold font-opensans text-[12px] text-gray-700 hover:text-green-600 "
+              className="cursor-pointer font-bold text-[12px] text-gray-700 hover:text-green-600 "
             >
               About Us
             </Link>
             <Link
               href="/faq"
-              className="cursor-pointer font-bold font-opensans text-[12px] text-gray-700 hover:text-green-600"
+              className="cursor-pointer font-bold text-[12px] text-gray-700 hover:text-green-600"
             >
               FaQ
             </Link>
             <Link
               href="/signin"
-              className="cursor-pointer font-bold font-opensans text-[12px] text-red-700 hover:text-green-600 "
+              className="cursor-pointer font-bold text-[12px] text-red-700 hover:text-green-600 "
             >
               SignIn
             </Link>
           </ul>
         </div>
         {/* mobile menu ends here */}
-        <h1 className="pt-5 text-center text-green-600 font-burtons text-[40px] underline">
+        <h1 className="pt-5 text-center text-green-600 text-[40px] underline">
           {" "}
           Contact Us
         </h1>
@@ -50,7 +50,7 @@ function contact() {
           <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
             <div class="mb-4">
               <label
-                class="block text-gray-700 text-sm font-opensans font-bold mb-2"
+                class="block text-gray-700 text-sm font-bold mb-2"
                 for="username"
               >
                 Enter email
@@ -64,7 +64,7 @@ function contact() {
             </div>
             <div class="mb-6">
               <label
-                class="block text-gray-700 text-sm font-opensans font-bold mb-2"
+                class="block text-gray-700 text-sm font-bold mb-2"
                 for="password"
               >
                 Message

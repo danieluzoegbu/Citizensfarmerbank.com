@@ -19,10 +19,10 @@ export default function Component() {
         </Head>
         <main className="xs:px-20 xs:py-10">
           <div className="xs:flex flex justify-between items-center">
-            <h1 className="font-burtons xs:text-[28px] text-[14px] pl-2">
+            <h1 className="xs:text-[28px] text-[14px] pl-2">
               D A S H B O A R D
             </h1>
-            <span className="font-opensans font-semibold text-green-500 text-[12px] xs:text-[14px]">
+            <span className=" font-semibold text-green-500 text-[12px] xs:text-[14px]">
               {session.user.email}
               <button
                 className="xs:mx-4 mx-1 xs:p-2 xs:text-[14px] bg-red-600 rounded-md text-[10px] text-white font-normal"
@@ -34,116 +34,93 @@ export default function Component() {
             </span>
           </div>
           {/* ACCOUNT BALANCE SHOWS HERE */}
-          
+
           {/* ACCOUNT BALANCE SHOWS HERE */}
           <div className="xs:flex text-center">
-            <div className="xs:pt-10 pt-3 px-5">
-              <p className="font-opensans pb-1 text-green-500 font-bold text-[15px] xs:text-[24px] tracking-wider">
+            <div className="xs:pt-10 pt-3 px-5 xs:flex">
+              <div className="pb-1 text-green-500 font-bold text-[15px] xs:text-[28px] tracking-wider">
                 ACCOUNT OVERVIEW
-              </p>
-              <p className="text-center font-opensans text-black font-bold text-[13px] xs:text-[14px]">
+              </div>
+              <p className="text-center  text-black font-bold text-[13px] xs:text-[14px]">
                 Account No. 0101{generator.uInt32()}
               </p>
-              <p className="text-center font-opensans text-black font-bold text-[13px] xs:text-[14px] pb-3">
+              <p className="text-center  text-black font-bold text-[13px] xs:text-[14px] pb-3">
                 Routine No. 14-{generator.uInt32()}
               </p>
-              <p className="font-opensans text-gray-400 font-bold pb-2 text-[13px] xs:text-[18px]">
+              <p className=" text-gray-400 font-bold pb-2 text-[13px] xs:text-[18px]">
                 Current Balance:
                 <span className="font-bold text-black text-[14px] xs:text-[18px] pl-1">
                   $5,000,000.00 <span className="text-green-500">USD</span>
                 </span>
               </p>
-              <p className="font-opensans text-gray-400 font-bold pb-2 text-[13px] xs:text-[18px]">
+              <p className=" text-gray-400 font-bold pb-2 text-[13px] xs:text-[18px]">
                 Available Balance:
                 <span className="font-bold text-black text-[14px] xs:text-[18px] pl-1">
                   $500,000.00 <span className="text-green-500">USD</span>
                 </span>
               </p>
-              <p className="font-opensans text-gray-400 font-bold pb-2 text-[13px] xs:text-[18px]">
+              <p className=" text-gray-400 font-bold pb-2 text-[13px] xs:text-[18px]">
                 Savings Balance:
                 <span className="font-bold text-black text-[14px] xs:text-[18px] pl-1">
                   $100,000.00 <span className="text-green-500">USD</span>
                 </span>
               </p>
               <div className="pt-10">
-                
-                
-                    <div className="bg-white min-h-min p-5">
-                      <div className="flex pb-10">
-                        <button
-                          className="close px-1 rounded-md bg-red-700 text-white"
-                          onClick={close}
-                        >
-                          &times;
-                        </button>
-                        <div className="header pl-10 font-opensans font-bold text-green-500 text-[18px]">
-                          SEND MONEY
-                        </div>
+                <div className="bg-white min-h-min p-5">
+                  <div className="flex pb-10">
+                    <div className="header pl-10  font-bold text-green-500 text-[18px]">
+                      SEND MONEY
+                    </div>
+                  </div>
+                  <label
+                    class="block uppercase text-[12px] text-gray-400 text-xs  font-bold mb-2"
+                    for="grid-password"
+                  >
+                    Amount
+                  </label>
+                  <input
+                    class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                    id="grid-password"
+                    type="number"
+                    placeholder="$50,000.00"
+                  />
+                  <label
+                    class="block uppercase text-[12px] text-gray-400 text-xs  font-bold mb-2"
+                    for="grid-password"
+                  >
+                    Beneficiary Account Number
+                  </label>
+                  <input
+                    class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                    id="grid-password"
+                    type="tel"
+                  />
+                  <label
+                    class="block uppercase text-[12px] text-gray-400 text-xs  font-bold mb-2"
+                    for="grid-password"
+                  >
+                    Transcation Note
+                  </label>
+                  <textarea
+                    class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                    id="grid-password"
+                  />
+                  <div className="action">
+                    <Popup
+                      trigger={<button className="button"> Send </button>}
+                      position="top center"
+                      nested
+                    >
+                      <div className="bg-white w-1/3 m-auto p-5">
+                        <Image alt="" src="/error.svg" width={50} height={50} />
+                        <span className="">
+                          Can not make transfer now. Pay tax first
+                        </span>
                       </div>
-                      <label
-                        class="block uppercase text-[12px] text-gray-400 text-xs font-opensans font-bold mb-2"
-                        for="grid-password"
-                      >
-                        Amount
-                      </label>
-                      <input
-                        class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                        id="grid-password"
-                        type="number"
-                        placeholder="$50,000.00"
-                      />
-                      <label
-                        class="block uppercase text-[12px] text-gray-400 text-xs font-opensans font-bold mb-2"
-                        for="grid-password"
-                      >
-                        Beneficiary Account Number
-                      </label>
-                      <input
-                        class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                        id="grid-password"
-                        type="tel"
-                      />
-                      <label
-                        class="block uppercase text-[12px] text-gray-400 text-xs font-opensans font-bold mb-2"
-                        for="grid-password"
-                      >
-                        Transcation Note
-                      </label>
-                      <textarea
-                        class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
-                        id="grid-password"
-                      />
-                      <div className="action">
-                        <Popup
-                          trigger={<button className="button"> Send </button>}
-                          position="top center"
-                          nested
-                        >
-                          <div className="bg-white w-1/3 m-auto p-5">
-                            <Image
-                              alt=""
-                              src="/error.svg"
-                              width={50}
-                              height={50}
-                            />
-                            <span className="font-opensans">
-                              Can not make transfer now. Pay tax first
-                            </span>
-                          </div>
-                        </Popup>
-                        <button
-                          className="button"
-                          onClick={() => {
-                            console.log("modal closed ");
-                            close();
-                          }}
-                        >
-                          close modal
-                        </button>
-                      </div>
-                    
+                    </Popup>
+                  </div>
+                </div>
               </div>
-            </div>
             </div>
           </div>
         </main>
@@ -156,18 +133,18 @@ export default function Component() {
         <div className="flex justify-center p-5">
           <Image alt="" src="/error.svg" width={100} height={100} />
         </div>
-        <h1 className="font-burtons p-10 text-[19px] xs:text-[24px]">
+        <h1 className="p-10 text-[19px] xs:text-[24px]">
           Not signed in! <br />
           You have to be signed in to access the{" "}
           <span className="text-red-500">D a s h b o a r d</span>{" "}
         </h1>
         <div className="pt-10 pb-20">
-          <Link href="/" className="px-2 font-opensans">
+          <Link href="/" className="px-2 ">
             Go Back
           </Link>
           <button
             onClick={() => signIn()}
-            className="bg-green-500 border border-green-400 py-2 px-6 rounded text-white font-opensans"
+            className="bg-green-500 border border-green-400 py-2 px-6 rounded text-white "
           >
             Sign in
           </button>
