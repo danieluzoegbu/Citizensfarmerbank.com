@@ -1,9 +1,8 @@
-import { useSession, signIn, signOut } from "next-auth/react";
 import Head from "next/head";
 import Image from "next/image";
-import Link from "next/link";
 import Popup from "reactjs-popup";
 import { aleaRNGFactory } from "number-generator";
+import Fade from "react-reveal";
 
 export default function Component() {
   const generator = aleaRNGFactory(2);
@@ -17,37 +16,39 @@ export default function Component() {
         <link rel="icon" href="/logo-img.png" />
       </Head>
       <main className="xs:px-20 xs:py-10">
-        <div className="xs:flex flex justify-between items-center bg-gray-600">
-          <h1 className=" font-bold xs:text-[34px] text-[14px] pl-2 text-gray-200">
-            D A S H B O A R D
-          </h1>
+        <div className="xs:flex flex justify-between items-center bg-green-500">
+          <Fade right>
+            <h1 className=" font-bold xs:text-[34px] text-[16px] pl-2 text-gray-100 tracking-wider">
+              DASHBOARD
+            </h1>
+          </Fade>
         </div>
         {/* ACCOUNT BALANCE SHOWS HERE */}
 
         {/* ACCOUNT BALANCE SHOWS HERE */}
-        <div className="xs:flex text-center">
-          <div className="xs:pt-10 pt-3 px-5">
-            <div className="xs:flex items-center">
-              <h1 className="pb-1 text-green-500 font-bold text-[15px] xs:text-[28px] tracking-wider">
+        <div className="xs:flex">
+          <div className="xs:pt-10 pt-3">
+            <div className="xs:flex bg-gray-600 p-3 items-center xs:px-10">
+              <h1 className="font-bold text-[16px] xs:text-[28px] tracking-wide text-gray-100">
                 ACCOUNT OVERVIEW
               </h1>
-              <p className="text-center  text-black font-bold text-[13px] xs:text-[14px]">
-                Account No. 0101{generator.uInt32()}
+              <p className="pl-2 xs:pl-5 font-semibold text-[13px] xs:text-[18px] text-gray-300">
+                <span className="font-bold">Account No.</span> 0101{generator.uInt32()}
               </p>
               <div className="px-2"></div>
-              <p className="text-center  text-black font-bold text-[13px] xs:text-[14px]">
-                Routine No. 14-{generator.uInt32()}
+              <p className="pl-2 xs:pl-0 font-semibold text-[13px] xs:text-[18px] text-gray-300">
+              <span className="font-bold">Routine No.</span> 14-{generator.uInt32()}
               </p>
             </div>
-            <div className="pt-10">
+            <div className="pt-5">
               <div className="bg-white min-h-min p-5">
-                <div className="flex pb-10">
-                  <div className="header pl-10  font-bold text-green-500 text-[18px]">
-                    SEND MONEY
+                <div className="flex pb-3 xs:pb-6">
+                  <div className="header font-bold text-green-800 text-[18px]">
+                    Money Transfer form
                   </div>
                 </div>
                 <label
-                  class="block uppercase text-[12px] text-gray-400 text-xs  font-bold mb-2"
+                  class="block uppercase text-[12px] text-gray-400 text-xs font-bold mb-2"
                   for="grid-password"
                 >
                   Amount
