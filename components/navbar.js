@@ -6,13 +6,12 @@ const Navbar = () => {
     <nav className="flex justify-between items-center p-20 mv:p-5">
       <div className="flex">
         {/* <Image alt="" src="/logo-img.png" width={40} height={40} /> */}
-      
-          <Image alt="" src="/logo-img.png" width={40} height={40} />
-          <span className="text-black font-bold pt-1 ml-3 xs:text-[25px]">
-            Citizens{" "}
-            <span className="text-green-600 xs:text-[25px]">Farmers</span> Bank
-          </span>
-   
+
+        <Image alt="" src="/logo-img.png" width={40} height={40} />
+        <span className="text-black font-bold pt-1 ml-3 xs:text-[25px]">
+          Citizens{" "}
+          <span className="text-green-600 xs:text-[25px]">Farmers</span> Bank
+        </span>
       </div>
       {/* Branding closed */}
 
@@ -33,34 +32,32 @@ const Navbar = () => {
         </button>
 
         <div className="hidden xs:flex xs:mr font-serif-5">
-       
-            <ul className="flex space-x-5">
-              <Link
-                href="/"
-                className="cursor-pointer font-semibold text-sm text-gray-700 hover:text-green-600 "
-              >
-                Home
-              </Link>
-              <Link
-                href="/about"
-                className="cursor-pointer font-semibold text-sm text-gray-700 hover:text-green-600 "
-              >
-                About Us
-              </Link>
-              <Link
-                href="/contact"
-                className="cursor-pointer font-semibold text-sm text-gray-700 hover:text-green-600 "
-              >
-                Contact Us
-              </Link>
-              <Link
-                href="/faq"
-                className="cursor-pointer font-semibold text-sm text-gray-700 hover:text-green-600"
-              >
-                FaQ
-              </Link>
-            </ul>
-      
+          <ul className="flex space-x-5">
+            <Link
+              href="/"
+              className="cursor-pointer font-semibold text-sm text-gray-700 hover:text-green-600 "
+            >
+              Home
+            </Link>
+            <Link
+              href="/about"
+              className="cursor-pointer font-semibold text-sm text-gray-700 hover:text-green-600 "
+            >
+              About Us
+            </Link>
+            <Link
+              href="/contact"
+              className="cursor-pointer font-semibold text-sm text-gray-700 hover:text-green-600 "
+            >
+              Contact Us
+            </Link>
+            <Link
+              href="/faq"
+              className="cursor-pointer font-semibold text-sm text-gray-700 hover:text-green-600"
+            >
+              FaQ
+            </Link>
+          </ul>
         </div>
       </div>
     </nav>

@@ -77,7 +77,7 @@ export default function Home() {
               {/* DESKTOP VIEW CREATE USER-ACCOUNT BUTTON */}
               <div className="gap-2 text-center hidden xs:flex xs:justify-center xs:mt-10">
                 <button className="bg-white hover:bg-gradient-to-r hover:from-green-400 hover:to-green-600 leading-0 px-6 py-2 rounded-md">
-                  <Link href="/authpage">
+                  <Link href="/Authpage">
                     <span className="text-[16px] text-green-500 hover:text-white">
                       Create Account
                     </span>
@@ -93,7 +93,7 @@ export default function Home() {
               <div className="flex gap-3 justify-center p-10">
                 <div className="xs:hidden">
                   <button className="bg-white leading-0 px-1 py-1 rounded-sm ">
-                    <Link href="/authpage">
+                    <Link href="/Authpage">
                       <span className="text-[10px] text-green-500">
                         Create Account
                       </span>
