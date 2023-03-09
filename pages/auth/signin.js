@@ -135,8 +135,8 @@ export default function Component() {
         </div>
         <h1 className="p-10 text-[19px] xs:text-[24px]">
           Not signed in! <br />
-          You have to be signed in to access the{" "}
-          <span className="text-red-500">D a s h b o a r d</span>{" "}
+          You have to be signed in to access your{" "}
+          <span className="text-red-500">Account</span>{" "}
         </h1>
         <div className="pt-10 pb-20">
           <Link href="/" className="px-2 ">
