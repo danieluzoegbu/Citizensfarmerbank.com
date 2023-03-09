@@ -1,12 +1,11 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Fade } from "react-reveal";
 
 const Footer = () => {
   return (
     <main className="bg-gray-100 mt-10">
       <div className="bg-gray-200 mt-10 m-auto mv:p-5 min-w-min">
-        <Fade left>
+    
           <div className="text-[12px] pb-10">
             <Link className="hover:text-decoration-line:underline" href="#">
               Notice of Data Collection |
@@ -45,10 +44,10 @@ const Footer = () => {
               Sitemap
             </Link>
           </div>
-        </Fade>
+    
         {/* SOCIAL MEDIA LOGO */}
         <div className="border-solid border-2 rounded border-green-200">
-          <Fade right>
+    
             <div className="flex gap-5 p-5 ">
               <Image
                 alt="Facebook"
@@ -76,9 +75,9 @@ const Footer = () => {
               />
               {/* SOCIAL MEDIA LOGO ENDS HERE */}
             </div>
-          </Fade>
+       
           <div className="p-10">
-            <Fade left>
+          
               <p className="text-[12px]">
                 1. You must be the primary account holder of an eligible CFB
                 consumer account with a FICO® Score available, and enrolled in
@@ -126,10 +125,10 @@ const Footer = () => {
                 fees (e.g., monthly service, overdraft) may apply to CFB
                 account(s) with which you use Zelle®.
               </p>
-            </Fade>
+     
           </div>
           <div className="m-10 border-solid border-2 border-gray-300">
-            <Fade up>
+          
               <h1 className="m-2 font-bold">
                 Investment and Insurance Products are:
               </h1>
@@ -144,7 +143,7 @@ const Footer = () => {
                 Subject to Investment Risks, Including Possible Loss of the
                 Principal Amount Invested
               </h2>
-            </Fade>
+       
           </div>
           <h1 className="text-center">© 1999 - 2023 Citizens Farmers Bank.</h1>
         </div>

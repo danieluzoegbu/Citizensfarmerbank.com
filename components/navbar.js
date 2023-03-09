@@ -1,19 +1,18 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Fade, Slide } from "react-reveal";
 
 const Navbar = () => {
   return (
     <nav className="flex justify-between items-center p-20 mv:p-5">
       <div className="flex">
         {/* <Image alt="" src="/logo-img.png" width={40} height={40} /> */}
-        <Fade right>
+      
           <Image alt="" src="/logo-img.png" width={40} height={40} />
           <span className="text-black font-bold pt-1 ml-3 xs:text-[25px]">
             Citizens{" "}
             <span className="text-green-600 xs:text-[25px]">Farmers</span> Bank
           </span>
-        </Fade>
+   
       </div>
       {/* Branding closed */}
 
@@ -34,7 +33,7 @@ const Navbar = () => {
         </button>
 
         <div className="hidden xs:flex xs:mr font-serif-5">
-          <Fade left>
+       
             <ul className="flex space-x-5">
               <Link
                 href="/"
@@ -61,7 +60,7 @@ const Navbar = () => {
                 FaQ
               </Link>
             </ul>
-          </Fade>
+      
         </div>
       </div>
     </nav>

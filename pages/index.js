@@ -4,7 +4,6 @@ import { Inter } from "@next/font/google";
 import Link from "next/link";
 import card from "../public/card.png";
 import { useSession, signIn, signOut } from "next-auth/react";
-import { Zoom, Fade, Slide } from "react-reveal";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -47,15 +46,14 @@ export default function Home() {
             </Link>
           </ul>
         </div>
-        <Slide left>
-          <span className="flex justify-center items-center gap-2 bg-green-500 text-green-100 mv:text-[10px] xs:text-[14px]">
-            <span className="font-bold text-green-700 mv:text-[13px] xs:text-[18px]">
-              Updates:
-            </span>
-            Get upto 4% on our Savings Account Balances with Citizens Farmers
-            Bank
+
+        <span className="flex justify-center items-center gap-2 bg-green-500 text-green-100 mv:text-[10px] xs:text-[14px]">
+          <span className="font-bold text-green-700 mv:text-[13px] xs:text-[18px]">
+            Updates:
           </span>
-        </Slide>
+          Get upto 4% on our Savings Account Balances with Citizens Farmers Bank
+        </span>
+
         {/* Promo Advert ends here */}
 
         <section
@@ -66,57 +64,51 @@ export default function Home() {
           }}
         >
           <div className="text-center text-white font-bold xs:flex-1 xs:text-center">
-            <Fade left>
-              <div className="pt-36">
-                <span className="text-[14px] xs:text-[30px]">
-                  Welcome to <br />
-                  <span className="text-white text-xl xs:text-[4rem]">
-                    Citizen Farmers Bank.
-                  </span>
+            <div className="pt-36">
+              <span className="text-[14px] xs:text-[30px]">
+                Welcome to <br />
+                <span className="text-white text-xl xs:text-[4rem]">
+                  Citizen Farmers Bank.
                 </span>
-                <p className="text-transparent text-x xs:text-1xl xs:mt-5">
-                  Create an account now!.
-                </p>
-                {/* DESKTOP VIEW CREATE USER-ACCOUNT BUTTON */}
-                <div className="gap-2 text-center hidden xs:flex xs:justify-center xs:mt-10">
-                  <button className="bg-white hover:bg-gradient-to-r hover:from-green-400 hover:to-green-600 leading-0 px-6 py-2 rounded-md">
+              </span>
+              <p className="text-transparent text-x xs:text-1xl xs:mt-5">
+                Create an account now!.
+              </p>
+              {/* DESKTOP VIEW CREATE USER-ACCOUNT BUTTON */}
+              <div className="gap-2 text-center hidden xs:flex xs:justify-center xs:mt-10">
+                <button className="bg-white hover:bg-gradient-to-r hover:from-green-400 hover:to-green-600 leading-0 px-6 py-2 rounded-md">
+                  <Link href="/authpage">
+                    <span className="text-[16px] text-green-500 hover:text-white">
+                      Create Account
+                    </span>
+                  </Link>
+                </button>
+                <button className="bg-green-500 hover:bg-gradient-to-r hover:from-green-400 hover:to-green-600 text-teal-900 leading-0 px-6 py-2 rounded-md">
+                  <Link href="/about">
+                    <span className="text-[16px] text-white">Learn more</span>
+                  </Link>
+                </button>
+              </div>
+              {/*   MOBILE VIEW CREATE USER-ACCOUNT BUTTON  */}
+              <div className="flex gap-3 justify-center p-10">
+                <div className="xs:hidden">
+                  <button className="bg-white leading-0 px-1 py-1 rounded-sm ">
                     <Link href="/authpage">
-                      <span className="text-[16px] text-green-500 hover:text-white">
+                      <span className="text-[10px] text-green-500">
                         Create Account
                       </span>
                     </Link>
                   </button>
-                  <button className="bg-green-500 hover:bg-gradient-to-r hover:from-green-400 hover:to-green-600 text-teal-900 leading-0 px-6 py-2 rounded-md">
+                </div>
+                <div className="xs:hidden">
+                  <button className="bg-green-500 leading-0 px-1 py-1 rounded-sm ">
                     <Link href="/about">
-                      <span className="text-[16px] text-white">
-                        Learn more
-                      </span>
+                      <span className="text-[10px]">Learn more</span>
                     </Link>
                   </button>
                 </div>
-                {/*   MOBILE VIEW CREATE USER-ACCOUNT BUTTON  */}
-                <div className="flex gap-3 justify-center p-10">
-                  <div className="xs:hidden">
-                    <button className="bg-white leading-0 px-1 py-1 rounded-sm ">
-                      <Link href="/authpage">
-                        <span className="text-[10px] text-green-500">
-                          Create Account
-                        </span>
-                      </Link>
-                    </button>
-                  </div>
-                  <div className="xs:hidden">
-                    <button className="bg-green-500 leading-0 px-1 py-1 rounded-sm ">
-                      <Link href="/about">
-                        <span className="text-[10px]">
-                          Learn more
-                        </span>
-                      </Link>
-                    </button>
-                  </div>
-                </div>
               </div>
-            </Fade>
+            </div>
           </div>
         </section>
         <section id="2">
@@ -124,40 +116,32 @@ export default function Home() {
             __________________________________
           </div>
 
-          <Fade left>
-            <div className="flex gap-2 font-bold justify-center items-center mt-10 mv:text-center mv:gap-1">
-              <Image
-                alt=""
-                src="/users.svg"
-                width={30}
-                height={30}
-                className="mv:w-5 mv:h-5"
-              />
-              <h3 className="bold text-[13px]">
-                3800+ USER ACTIVE
-              </h3>
-              <Image
-                alt=""
-                src="/random-building.svg"
-                width={30}
-                height={30}
-                className="w-30 h-30 mv:w-5 mv:h-5"
-              />
-              <h3 className="font-bold text-[13px]">
-                230+ TRUSTED BY COMPANY
-              </h3>
-              <Image
-                alt=""
-                src="/profitcurve.svg"
-                width={30}
-                height={30}
-                className="mv:w-5 mv:h-5"
-              />
-              <h3 className="font-bold text-[13px]">
-                $230M+ TRANSACTION
-              </h3>
-            </div>
-          </Fade>
+          <div className="flex gap-2 font-bold justify-center items-center mt-10 mv:text-center mv:gap-1">
+            <Image
+              alt=""
+              src="/users.svg"
+              width={30}
+              height={30}
+              className="mv:w-5 mv:h-5"
+            />
+            <h3 className="bold text-[13px]">3800+ USER ACTIVE</h3>
+            <Image
+              alt=""
+              src="/random-building.svg"
+              width={30}
+              height={30}
+              className="w-30 h-30 mv:w-5 mv:h-5"
+            />
+            <h3 className="font-bold text-[13px]">230+ TRUSTED BY COMPANY</h3>
+            <Image
+              alt=""
+              src="/profitcurve.svg"
+              width={30}
+              height={30}
+              className="mv:w-5 mv:h-5"
+            />
+            <h3 className="font-bold text-[13px]">$230M+ TRANSACTION</h3>
+          </div>
         </section>
         {/* Our feature section starts here */}
         <section
@@ -165,30 +149,26 @@ export default function Home() {
           id="section1"
         >
           <div className="text-center items-center mv:text-center">
-            <Fade right>
-              <h1 className="mt-5 text-white text-xl xs:text-3xl">
-                Our Features
-              </h1>
-            </Fade>
+            <h1 className="mt-5 text-white text-xl xs:text-3xl">
+              Our Features
+            </h1>
+
             {/* OUR FEATURE SECTION CONTENT 1*/}
             <div className="xs:flex xs:justify-between mv:mt-10 mv:text-[10px]">
-              <Fade left>
-                <Image
-                  alt=""
-                  width={400}
-                  height={400}
-                  src={card}
-                  className="m-5 xs:w-64 md:w-auto"
-                />
-              </Fade>
-              <Fade right loop>
-                <p className="text-gray-400 text-[12px] xs:text-[12px] xs:mt-40 md:text-[16px]">
-                  - Make payment by linking your paypal account.
-                  <br /> - Our platform is fast and reliable to use.
-                  <br /> - See accuract statistical values.
-                  <br /> - Quick transaction.
-                </p>
-              </Fade>
+              <Image
+                alt=""
+                width={400}
+                height={400}
+                src={card}
+                className="m-5 xs:w-64 md:w-auto"
+              />
+
+              <p className="text-gray-400 text-[12px] xs:text-[12px] xs:mt-40 md:text-[16px]">
+                - Make payment by linking your paypal account.
+                <br /> - Our platform is fast and reliable to use.
+                <br /> - See accuract statistical values.
+                <br /> - Quick transaction.
+              </p>
             </div>
             {/*  SECTION CONTENT 2 */}
             <div className="xs:flex pt-20 mt-20 justify-between w-[]">
@@ -272,9 +252,7 @@ export default function Home() {
 
         {/* NEWS LETTER */}
         <div className="bg-gray-900 mv:pt-20 mv:text-center">
-          <span className="text-white text-[18px]">
-            Get updates from us
-          </span>
+          <span className="text-white text-[18px]">Get updates from us</span>
         </div>
 
         <div className="pt-5 flex justify-center items-center bg-gray-900 px-20 gap-1 pb-20">

@@ -2,7 +2,6 @@ import Head from "next/head";
 import Image from "next/image";
 import Popup from "reactjs-popup";
 import { aleaRNGFactory } from "number-generator";
-import Fade from "react-reveal";
 
 export default function Component() {
   const generator = aleaRNGFactory(2);
@@ -17,11 +16,9 @@ export default function Component() {
       </Head>
       <main className="xs:px-20 xs:py-10">
         <div className="xs:flex flex justify-between items-center bg-green-500">
-          <Fade right>
-            <h1 className=" font-bold xs:text-[34px] text-[16px] pl-2 text-gray-100 tracking-wider">
-              DASHBOARD
-            </h1>
-          </Fade>
+          <h1 className=" font-bold xs:text-[34px] text-[16px] pl-2 text-gray-100 tracking-wider">
+            DASHBOARD
+          </h1>
         </div>
         {/* ACCOUNT BALANCE SHOWS HERE */}
 
@@ -33,11 +30,13 @@ export default function Component() {
                 ACCOUNT OVERVIEW
               </h1>
               <p className="pl-2 xs:pl-5 font-semibold text-[13px] xs:text-[18px] text-gray-300">
-                <span className="font-bold">Account No.</span> 0101{generator.uInt32()}
+                <span className="font-bold">Account No.</span> 0101
+                {generator.uInt32()}
               </p>
               <div className="px-2"></div>
               <p className="pl-2 xs:pl-0 font-semibold text-[13px] xs:text-[18px] text-gray-300">
-              <span className="font-bold">Routine No.</span> 14-{generator.uInt32()}
+                <span className="font-bold">Routine No.</span> 14-
+                {generator.uInt32()}
               </p>
             </div>
             <div className="pt-5">
