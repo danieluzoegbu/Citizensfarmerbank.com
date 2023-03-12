@@ -3,7 +3,7 @@ import Image from "next/image";
 import { Inter } from "@next/font/google";
 import Link from "next/link";
 import card from "../public/card.png";
-import { useSession, signIn, signOut } from "next-auth/react";
+import { motion } from "framer-motion";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,7 +17,11 @@ export default function Home() {
         <link rel="icon" href="/logo-img.png" />
       </Head>
       <main className="mx-40 mv:m-auto">
-        <div>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1.0 }}
+        >
           <ul className="flex mx-5 justify-center space-x-5">
             <Link
               href="/about"
@@ -45,14 +49,19 @@ export default function Home() {
               SignIn
             </Link>
           </ul>
-        </div>
+        </motion.div>
 
-        <span className="flex justify-center items-center gap-2 bg-green-500 text-green-100 mv:text-[10px] xs:text-[14px]">
+        <motion.span
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1.0 }}
+          className="flex justify-center items-center gap-2 bg-green-500 text-green-100 mv:text-[10px] xs:text-[14px]"
+        >
           <span className="font-bold text-green-700 mv:text-[13px] xs:text-[18px]">
             Updates:
           </span>
           Get upto 4% on our Savings Account Balances with Citizens Farmers Bank
-        </span>
+        </motion.span>
 
         {/* Promo Advert ends here */}
 
@@ -64,7 +73,12 @@ export default function Home() {
           }}
         >
           <div className="text-center text-white font-bold xs:flex-1 xs:text-center">
-            <div className="pt-36">
+            <motion.div
+              className="pt-36"
+              initial={{ opacity: 0, scale: 0.5 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 1.5 }}
+            >
               <span className="text-[14px] xs:text-[30px]">
                 Welcome to <br />
                 <span className="text-white text-xl xs:text-[4rem]">
@@ -108,7 +122,7 @@ export default function Home() {
                   </button>
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
         </section>
         <section id="2">
@@ -116,7 +130,12 @@ export default function Home() {
             __________________________________
           </div>
 
-          <div className="flex gap-2 font-bold justify-center items-center mt-10 mv:text-center mv:gap-1">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 2.0 }}
+            className="flex gap-2 font-bold justify-center items-center mt-10 mv:text-center mv:gap-1"
+          >
             <Image
               alt=""
               src="/users.svg"
@@ -141,14 +160,19 @@ export default function Home() {
               className="mv:w-5 mv:h-5"
             />
             <h3 className="font-bold text-[13px]">$230M+ TRANSACTION</h3>
-          </div>
+          </motion.div>
         </section>
         {/* Our feature section starts here */}
         <section
           className="mt-10 xs:p-20 bg-gray-900 flex justify-center"
           id="section1"
         >
-          <div className="text-center items-center mv:text-center">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 2.0 }}
+            className="text-center items-center mv:text-center"
+          >
             <h1 className="mt-5 text-white text-xl xs:text-3xl">
               Our Features
             </h1>
@@ -246,7 +270,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
         </section>
         {/* Our feature section ends here */}
 

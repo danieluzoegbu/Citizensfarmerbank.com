@@ -47,3 +47,10 @@ model User {
   phoneNumber     String      
   accountBalance  String
 }
+
+model VerificationToken {
+  identifier String   @id @default(auto()) @map("_id") @db.ObjectId
+  token      String   @unique
+  expires    DateTime
+  @@unique([identifier, token])
+}

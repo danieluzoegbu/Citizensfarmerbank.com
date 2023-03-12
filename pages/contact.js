@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Head from "next/head";
+import { motion } from "framer-motion";
 
 function contact() {
   return (
@@ -12,7 +13,11 @@ function contact() {
         <link rel="icon" href="/logo-img.png" />
       </Head>
       <main>
-        <div>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1.0 }}
+        >
           <ul className="flex mx-5 justify-center space-x-5">
             <Link
               href="/"
@@ -39,15 +44,25 @@ function contact() {
               SignIn
             </Link>
           </ul>
-        </div>
+        </motion.div>
         {/* mobile menu ends here */}
-        <h1 className="pt-5 text-center text-green-600 text-[40px] underline">
+        <motion.h1
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1.0 }}
+          className="pt-5 text-center text-green-600 text-[40px] underline"
+        >
           {" "}
           Contact Us
-        </h1>
+        </motion.h1>
         {/* CONTACT US TITLE ENDS HERE */}
         <div class="min-w-min m-auto p-10 bg-gray-100 justify-center">
-          <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+          <motion.form
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 2.0 }}
+            class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"
+          >
             <div class="mb-4">
               <label
                 class="block text-gray-700 text-sm font-bold mb-2"
@@ -73,7 +88,6 @@ function contact() {
                 class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
                 id="message"
                 type="text"
-                
               />
               <p class="text-gray-500 text-xs italic">Contacting CFB.</p>
             </div>
@@ -85,7 +99,7 @@ function contact() {
                 Send
               </button>
             </div>
-          </form>
+          </motion.form>
           <p class="text-center text-gray-500 text-xs">
             &copy;2023 CitizensFarmerBank. All rights reserved.
           </p>

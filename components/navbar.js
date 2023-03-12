@@ -1,9 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 const Navbar = () => {
   return (
-    <nav className="flex justify-between items-center p-20 mv:p-5">
+    <motion.nav
+      initial={{ opacity: 0, scale: 0.5 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 1.0 }}
+      className="flex justify-between items-center p-20 mv:p-5"
+    >
       <div className="flex">
         {/* <Image alt="" src="/logo-img.png" width={40} height={40} /> */}
 
@@ -60,7 +66,7 @@ const Navbar = () => {
           </ul>
         </div>
       </div>
-    </nav>
+    </motion.nav>
   );
 };
 
