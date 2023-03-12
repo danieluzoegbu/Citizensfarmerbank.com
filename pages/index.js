@@ -32,7 +32,7 @@ export default function Home() {
               Contact Us
             </Link>
             <Link
-              href="/faq"
+              href="/"
               className="cursor-pointer font-bold text-[12px] text-gray-700 hover:text-green-600"
             >
               FaQ
