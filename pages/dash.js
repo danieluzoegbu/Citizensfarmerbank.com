@@ -1,12 +1,10 @@
 import Head from "next/head";
 import Image from "next/image";
-import { aleaRNGFactory } from "number-generator";
 import { motion } from "framer-motion";
 import graph from "../public/graph.svg";
-import atm from "../public/atm.svg";
+// import atm from "../public/atm.svg";
 
 export default function Component() {
-  const generator = aleaRNGFactory(2);
 
   return (
     <>
