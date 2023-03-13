@@ -41,7 +41,7 @@ export default function Component() {
           transition={{ duration: 1.2 }}
         >
           <h1 className="font-semibold text-[12px] xs:text-[18px] uppercase pb-5 xs:pb-5">
-          Welcome { session.user.email }
+          Welcome {session.user.email}
           </h1>
           <h1 className="font-semibold text-[12px] xs:text-[18px] xs:pt-3 pb-2">
             Account balance
