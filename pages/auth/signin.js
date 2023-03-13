@@ -1,4 +1,3 @@
-import { useSession, signIn, signOut } from "next-auth/react";
 import Head from "next/head";
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -17,7 +16,6 @@ export default function Component() {
       <main className="xs:mx-32 mx-5">
         {/* Welcome section for dashboard and signout button*/}
         <motion.section
-          id=""
           className="flex justify-between pb-3"
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -28,7 +26,7 @@ export default function Component() {
           </h1>
           <button
             className="text-green-600 font-semibold border border-green-300 px-1 hover:bg-green-600 hover:text-white"
-            onClick={() => signOut()}
+            // onClick={() => signOut()}
           >
             Sign out
           </button>
@@ -41,7 +39,7 @@ export default function Component() {
           transition={{ duration: 1.2 }}
         >
           <h1 className="font-semibold text-[12px] xs:text-[18px] uppercase pb-5 xs:pb-5">
-          Welcome {session.user.email}
+          Welcome User
           </h1>
           <h1 className="font-semibold text-[12px] xs:text-[18px] xs:pt-3 pb-2">
             Account balance
