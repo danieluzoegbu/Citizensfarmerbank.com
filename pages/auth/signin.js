@@ -2,7 +2,6 @@ import { useSession, signIn, signOut } from "next-auth/react";
 import Head from "next/head";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import graph from "../public/graph.svg";
 // import atm from "../public/atm.svg";
 
 export default function Component() {
@@ -125,8 +124,8 @@ export default function Component() {
             </form>
           </div>
           <Image
-            alt=""
-            src={graph}
+            alt="graph"
+            src="/graph.svg"
             width={300}
             height={300}
             className="p-3 mt-5 w-auto h-auto"
