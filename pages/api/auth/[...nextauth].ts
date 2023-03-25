@@ -52,7 +52,8 @@ const options: NextAuthOptions = {
 
             return session
         }
-    }
+    },
+    secret: process.env.JWT_SECRET,
 }
 
 export default NextAuth(options)
