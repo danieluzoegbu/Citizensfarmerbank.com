@@ -77,7 +77,7 @@ const SignupForm = () => {
       try {
         setLoading(true);
         const apiRes = await axios.post(
-          "http://localhost:3000/api/auth/signup",
+          "/api/auth/signup",
           data
         );
 
