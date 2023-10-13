@@ -37,6 +37,7 @@ const SignupForm = () => {
     current: "0.0",
     accountNo: accountNo,
     routingNo: routingNo,
+    history: "No Transaction History yet."
   });
 
   const [validationErrors, setValidationErrors] = useState<InputErros[]>([]);

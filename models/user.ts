@@ -40,7 +40,10 @@ const UserSchema = new Schema({
     },
     routingNo: {
         type: String,
-    }
+    },
+    history: {
+        type: String,
+    },
     
 })
 

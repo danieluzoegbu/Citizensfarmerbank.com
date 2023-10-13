@@ -279,14 +279,10 @@ export default function Component() {
           </h2>
           <div className="xs:mx-14 pb-10 border border-gray-600">
             <div className="flex p-3 bg-green-600 justify-between text-white">
-              <h3>Type</h3>
-              <h3>Date</h3>
-              <h3>Details</h3>
-              <h3>Amount</h3>
-              <h3>Balance</h3>
+              <h3>History Note</h3>
             </div>
-            <p className="text-center pt-3 font-semibold">
-              No Transaction has been made
+            <p className="pt-3 font-semibold">
+              {session?.user?.history}
             </p>
           </div>
         </motion.section>

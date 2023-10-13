@@ -14,6 +14,7 @@ export interface IUser {
     current: string;
     accountNo: string;
     routingNo: string;
+    history: string;
 }
 
 export interface LoginUserParams {
